@@ -39,11 +39,11 @@ By accessing the public IP address in a browser, the configured web page is disp
 
 ---
 
-## User Data Automation (Optional)
+## User Data Automation
 
 User data was used to automate the setup of the web server during instance launch.
 
-The script installs Apache, starts the service, and creates a basic web page automatically.
+The script installs Apache, starts the service, and creates a basic web page automatically, removing the need for manual configuration.
 
 ![User Data](user-data.png)
 
@@ -52,10 +52,10 @@ The script installs Apache, starts the service, and creates a basic web page aut
 ## Key Concepts Demonstrated
 
 - EC2 instance deployment
-- Security group configuration
-- Web server hosting (Apache)
-- Automation using user data
-- Public IP access
+- Security group configuration (ports 22 and 80)
+- Web server hosting using Apache
+- Automation using user data scripts
+- Public IP access over HTTP
 
 ---
 

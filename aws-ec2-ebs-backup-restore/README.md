@@ -1,23 +1,53 @@
-
 # AWS EC2 Backup & Restore using EBS Snapshots
 
 ## Overview
-This project shows how I backed up an EC2 instance using an EBS snapshot and restored the data by attaching the restored volume to a new EC2 instance.
+This project demonstrates how to back up and restore an EC2 instance using EBS snapshots.
 
-## Steps
-1. Created an EC2 instance
-2. Created a snapshot of its EBS volume
-3. Created a new volume from the snapshot
-4. Launched a new EC2 instance in the same Availability Zone
-5. Attached the restored volume
-6. Connected with EC2 Instance Connect
-7. Mounted the restored partition in Linux
-8. Verified the recovered data
+---
 
-## Commands Used
+## Step 1 — EC2 Instance Running
 
-```bash
-lsblk
-sudo mkdir -p /data
-sudo mount -o nouuid -t xfs /dev/nvme1n1p1 /data
-ls /data
+![EC2](ec2-running.png)
+The EC2 instance was launched and running successfully.
+
+---
+
+## Step 2 — Snapshot Created
+
+![Snapshot](snapshot-created.png)
+A snapshot of the EBS volume was created.
+
+---
+
+## Step 3 — New EC2 Instance
+
+![New EC2](new-ec2.png)
+A new EC2 instance was launched in the same Availability Zone.
+
+---
+
+## Step 4 — Volume Attached
+
+![Volume](volume-attached.png)
+The restored volume was attached to the new EC2 instance.
+
+---
+
+## Step 5 — Disk Check
+
+![lsblk](lsblk.png)
+The volume was detected using the lsblk command.
+
+---
+
+## Step 6 — Volume Mounted
+
+![Mounted](mounted-volume.png)
+The volume was mounted using the correct filesystem.
+
+---
+
+## Step 7 — Data Recovered
+
+![Recovered](recovered-data.png)
+The original data was successfully recovered.
